@@ -9,9 +9,14 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 model = ChatGoogleGenerativeAI(
-    model="gemini-flash-lite-latest",  
-    temperature=0.7
+    model="gemini-flash-lite-latest",
+    temperature=0.7,
+    google_api_key=os.getenv("GEMINI_API_KEY")  # or maybe this line is missing/wrong
 )
 
 
