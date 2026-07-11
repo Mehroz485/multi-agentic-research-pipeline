@@ -13,12 +13,13 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+import streamlit as st
+
 model = ChatGoogleGenerativeAI(
     model="gemini-flash-lite-latest",
     temperature=0.7,
-    google_api_key=os.getenv("GEMINI_API_KEY")  # or maybe this line is missing/wrong
+    google_api_key=st.secrets["GEMINI_API_KEY"]
 )
-
 
 def build_search_agent():
     return create_agent(
