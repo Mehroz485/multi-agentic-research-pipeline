@@ -15,6 +15,8 @@ load_dotenv()
 
 import streamlit as st
 
+st.write(st.secrets.keys())
+
 model = ChatGoogleGenerativeAI(
     model="gemini-flash-lite-latest",
     temperature=0.7,
