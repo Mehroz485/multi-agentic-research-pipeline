@@ -1,0 +1,11 @@
+langchain
+langchain-core
+langchain-google-genai
+langchain-community
+langchainhub
+tavily-python
+beautifulsoup4
+requests
+lxml
+python-dotenv
+google-generativeai
